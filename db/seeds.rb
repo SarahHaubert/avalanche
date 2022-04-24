@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+
+20.times do 
+    Course.create(title:Faker::Mountain.name, body:Faker::Quote.yoda)
+end
