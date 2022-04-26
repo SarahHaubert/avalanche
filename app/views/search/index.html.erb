@@ -1,0 +1,25 @@
+<h1 class="text-center"><%= pluralize(@courses.count, "Result")%></h1>
+
+<%= render 'search/form' %>
+
+<div class="container">
+    <table class="table table-light table-striped">
+        <thead>
+            <tr>
+                <th><%=sort_link(@query, :title, "Title", default_order: :asc) %></th>
+                <th><%=sort_link(@query, :body, "Content", ) %></th>
+                <th><%=sort_link(@query, :detail, "Description") %></th>
+            </tr>
+        </thead>
+        <tbody>
+        <% @courses.each do |course| %>
+        <tr>
+            <td><%= link_to course.title, course%></td>
+            <td><%= course.body%></td>
+            <td><%= course.detail.truncate_words(15)%></td>
+        </tr>
+        <% end %>
+        
+        </tbody>
+    </table>
+</div>

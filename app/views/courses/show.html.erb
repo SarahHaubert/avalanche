@@ -1,10 +1,32 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @course %>
+
+
+<div class="container">
+<div class="row pt-5">
+
+<div class="col-md-6 ">
+  <h1 class="align-text-center"><%= @course.title %></h1>
+  <h5><%=@course.organization%></h5>
+  <p><%= @course.detail%></p>
+
+</div>
+
+  <div class="col-md-6">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/<%=@course.vid%>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</div>
+<%= link_to "Back to courses", courses_path, class: "btn btn-info text-light" %>
+</div>
+
+
 
 <div>
+<% if current_user.email == "sarah@sarah.com"%> 
   <%= link_to "Edit this course", edit_course_path(@course) %> |
-  <%= link_to "Back to courses", courses_path %>
+  
 
   <%= button_to "Destroy this course", @course, method: :delete %>
+
+  <% end %>
 </div>

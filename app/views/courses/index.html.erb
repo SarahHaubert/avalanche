@@ -1,14 +1,23 @@
+
+
+<div class="course-container">
+<div class="w-100 p-4"></div>
+  <div class="row mb-3">
+ 
+  <% 1.times do %>
+  <% @courses.each do |course| %>
+  <div class="col-4 d-flex align-items-stretch mb-3 mt-2">
+    
+  <%= render course %>
+
+
+
+  </div>
+  <%end %>
+  <%end %>
+  </div>
+  </div>
+
+  <div class="container">
 <p style="color: green"><%= notice %></p>
 
-<h1>Courses</h1>
-
-<div id="courses">
-  <% @courses.each do |course| %>
-    <%= render course %>
-    <p>
-      <%= link_to "Show this course", course %>
-    </p>
-  <% end %>
-</div>
-
-<%= link_to "New course", new_course_path %>

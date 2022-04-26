@@ -1,26 +1,27 @@
+
 <div id="<%= dom_id course %>">
   
-  <div class="card mb-3" style="max-width: 540px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="https://images.unsplash.com/photo-1582501929835-c004cf990e10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8YXZhbGFuY2hlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid rounded-start" alt="...">
+  
+
+
+
+
+<div class="card shadow hover-zoom" style="background: url(<%=course.img%>)">
+  <div class="bg-image hover-shadow ripple" data-mdb-ripple-color="light" style="width: 100%; height: 100px;">
+    <img src="" class="img-fluid" style=""/>
+    <a href="#!">
+      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+    </a>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"><strong><%= course.title %></strong></h5>
+    
+    <div style="background: white; opacity: 0.7; border-radius: 10px;">
+    
+    <p class="card-text p-1" style="opacity: 2"><%= course.body %></p>
     </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title"><%= course.title %></h5>
-        <p class="card-text"><%= course.body %></p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
+    <%= link_to "See Course", course, class: "btn btn-primary mt-3" %>
   </div>
 </div>
-  <h3>
-    
-  </h3>
-
-  <div>
-    
-    
-  </div>
 
 </div>
